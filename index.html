@@ -31,10 +31,10 @@
       color: #283593;
     }
 
-    .iframe-container {
+  /*  .iframe-container {
       position: relative;
       width: 100%;
-      padding-bottom: 56.25%; /* Relación 16:9 */
+      padding-bottom: 90%; 
       height: 0;
       margin-bottom: 2rem;
     }
@@ -47,6 +47,16 @@
       height: 100%;
       border: 1px solid #ccc;
     }
+*/
+
+    .iframe-wrapper {
+      width: 100%;
+      margin-bottom: 2rem;
+     /*  border: 1px solid #ccc; */
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
 
     @media (max-width: 600px) {
       .iframe-container {
@@ -57,20 +67,19 @@
 </head>
 <body>
   <header>
-    <h1>Variables Macroeconómicas</h1>
+    <h1> </h1>
     <p>Visualización interactiva de indicadores macroeconómicos actualizados</p>
   </header>
   <main>
-    <h2>Inflación</h2>
-    <div class="iframe-container">
-      <iframe title="Variables_Macro" width="100%" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiZWM5YWU0NWYtNzk0ZS00MDY5LWFiZWEtYTk4NDAyNjg1NjdkIiwidCI6IjI4NDExZDAzLTE3YmUtNDcwNi04NjFmLTU2ZWNkODI0YjAzMCJ9" frameborder="0" allowFullScreen="true"></iframe>
+    <h2> </h2>
+    <div class="iframe-wrapper" style="height: 900px;">
+      <iframe title="Variables_Macro" width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiZWM5YWU0NWYtNzk0ZS00MDY5LWFiZWEtYTk4NDAyNjg1NjdkIiwidCI6IjI4NDExZDAzLTE3YmUtNDcwNi04NjFmLTU2ZWNkODI0YjAzMCJ9" frameborder="0" allowFullScreen="true"></iframe>
     </div>
 
     <h2>Mercado de Trabajo</h2>
-    <div class="iframe-container">
-      <iframe title="Mercado Laboral" width="100%" height="650" src="https://app.powerbi.com/view?r=eyJrIjoiYmFmOTQ3ZmQtYjE4Yy00MzJjLTlkOTktZGIwNGQ1ZTE1MmE5IiwidCI6IjI4NDExZDAzLTE3YmUtNDcwNi04NjFmLTU2ZWNkODI0YjAzMCJ9" frameborder="0" allowFullScreen="true"></iframe>
+    <div class="iframe-wrapper" style="height: 690px;">
+      <iframe title="Mercado Laboral" width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiYmFmOTQ3ZmQtYjE4Yy00MzJjLTlkOTktZGIwNGQ1ZTE1MmE5IiwidCI6IjI4NDExZDAzLTE3YmUtNDcwNi04NjFmLTU2ZWNkODI0YjAzMCJ9" frameborder="0" allowFullScreen="true"></iframe>
     </div>
   </main>
 </body>
 </html>
-
