@@ -77,14 +77,17 @@
       display: none;
     }
 
+
     .iframe-wrapper {
       width: 100%;
-      height: 700px;
+      height: 900px
       border-radius: 6px;
       overflow: hidden;
+      overflow-y: auto;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       display: none;
     }
+
 
     .construccion {
       height: 200px;
@@ -203,7 +206,7 @@
       { id: "inflacion", nombre: "Inflación", iframe: "https://app.powerbi.com/view?r=eyJrIjoiMjlkM2NjZDAtNjBmOS00YjUzLWI5MzMtY2I4M2M4YzZiNWVmIiwidCI6IjI4NDExZDAzLTE3YmUtNDcwNi04NjFmLTU2ZWNkODI0YjAzMCJ9", icono: "📊" },
       { id: "laboral", nombre: "Mercado Laboral", iframe: "https://app.powerbi.com/view?r=eyJrIjoiNjlkNWEzOWUtMDYwNS00YzY3LWExODUtNWExNjdlZGQ5OGVkIiwidCI6IjI4NDExZDAzLTE3YmUtNDcwNi04NjFmLTU2ZWNkODI0YjAzMCJ9", icono: "👥" },
       { id: "salarios", nombre: "Salarios", iframe: "https://app.powerbi.com/view?r=eyJrIjoiNDg2YTU0N2QtMmM0Yy00NzA3LWExMjYtMjc4YWJjZDMwMTZmIiwidCI6IjI4NDExZDAzLTE3YmUtNDcwNi04NjFmLTU2ZWNkODI0YjAzMCJ9", icono: "💰" },
-      { id: "fiscal", nombre: "Resultado Fiscal", iframe: null, icono: "🧾" },
+      { id: "fiscal", nombre: "Resultado Fiscal", iframe: "https://app.powerbi.com/view?r=eyJrIjoiOWYzOTQ1YTItNzcxYy00YjVjLWExZDYtNzZiZGY5NmMxZjgwIiwidCI6IjI4NDExZDAzLTE3YmUtNDcwNi04NjFmLTU2ZWNkODI0YjAzMCJ9", icono: "🧾", alto: 900 },
       { id: "cambio", nombre: "Tipos de Cambio", iframe: null, icono: "💵" },
       { id: "monetaria", nombre: "Política Monetaria", iframe: null, icono: "🏦" },
       { id: "tasas", nombre: "Tasas de Interés", iframe: null, icono: "📈" },
@@ -233,7 +236,7 @@
       contenedor.className = panel.iframe ? "iframe-wrapper" : "construccion";
       contenedor.style.display = "none";
       contenedor.innerHTML = panel.iframe
-        ? `<iframe width="100%" height="100%" src="${panel.iframe}" frameborder="0" allowfullscreen></iframe>`
+        ? `<iframe width="100%" height="${panel.alto || 700}" src="${panel.iframe}" frameborder="0" allowfullscreen></iframe>`
         : `<img src="https://cdn.pixabay.com/photo/2013/07/12/14/06/construction-work-147759_960_720.png" alt="Trabajando" class="construccion-img"><div>Panel en construcción</div>`;
       panelesContenido.appendChild(contenedor);
 
